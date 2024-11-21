@@ -17,7 +17,7 @@ Install
 
 **RK_Pairip Method 1**
 
-    python3 -m pip install rkjp
+    python3 -m pip install RK_Pairip
 
 **RK_Pairip Method 2**
 
@@ -134,7 +134,7 @@ Fix Dex Regex
 Updating
 --------
 
-    python3 -m pip install --upgrade rkjp
+    python3 -m pip install --upgrade RK_Pairip
 
 
 Note
