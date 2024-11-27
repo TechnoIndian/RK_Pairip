@@ -23,7 +23,7 @@ class FileCheck:
 
 {C.lb}[ {C.rd}INFO {C.lb}]{C.rd} Internet Connection is Required to Install {C.rd}'{C.g}pkg install {A}{C.rd}' ✘{C.r}
 """)
-	def set_paths(A):B=C.os.path.dirname(C.os.path.abspath(C.sys.argv[0]));A.apkeditor_path=C.os.path.join(B,'APKEditor.jar');A.apktool_path=C.os.path.join(B,'apktool.jar');A.axml2xml_jar_path=C.os.path.join(B,'axml2xml.jar');A.apktool_framework_zip=C.os.path.join(C.os.path.expanduser('~'),'ApkTool_Framwork.zip');A.Objectlogger=C.os.path.join(C.os.path.dirname(C.os.path.abspath(__file__)),'Objectlogger.smali');A.local_folder_path=C.os.path.join(C.os.path.expanduser('~'),'.local')
+	def set_paths(A):B=C.os.path.dirname(C.os.path.abspath(C.sys.argv[0]));A.apkeditor_path=C.os.path.join(B,'APKEditor_Pairip.jar');A.apktool_path=C.os.path.join(B,'APKTool_Pairip.jar');A.axml2xml_jar_path=C.os.path.join(B,'axml2xml.jar');A.apktool_framework_zip=C.os.path.join(C.os.path.expanduser('~'),'ApkTool_Framwork.zip');A.Objectlogger=C.os.path.join(C.os.path.dirname(C.os.path.abspath(__file__)),'Objectlogger.smali');A.local_folder_path=C.os.path.join(C.os.path.expanduser('~'),'.local')
 	def download_file(Q,jar_urls_and_paths):
 		import requests as G;J=set()
 		for(H,B)in jar_urls_and_paths:
