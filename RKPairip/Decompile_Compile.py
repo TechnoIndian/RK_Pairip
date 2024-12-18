@@ -1,3 +1,5 @@
+_F='ignore'
+_E='utf-8'
 _D=True
 _C='-o'
 _B='-jar'
@@ -20,19 +22,19 @@ class De_Compiler:
 			for B in G:
 				if B.endswith('.smali'):
 					H=C.os.path.join(F,B)
-					with open(H,'r')as I:J=I.read()
+					with open(H,'r',encoding=_E,errors=_F)as I:J=I.read()
 					D=E.search(J)
 					if D:A=D.group(1).replace('/','.');break
 			if A:break
 		return A
 	def replace_application_value(E,manifest_path,old_value,new_value):
 		B=manifest_path
-		with open(B,'r')as A:C=A.read()
+		with open(B,'r',encoding=_E,errors=_F)as A:C=A.read()
 		D=C.replace(old_value,new_value)
-		with open(B,'w')as A:A.write(D)
+		with open(B,'w',encoding=_E,errors=_F)as A:A.write(D)
 	def recompile_apk(G,decompile_dir,use_apktool,build_dir):
 		E='b';B=decompile_dir;A=build_dir
-		if C.os.path.isfile(A):print(f"\n{C.r}_____________________________________________________________\n");print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} APK Already Exists.\n{C.g}  |\n  └──── {C.g}Removed Old APK... {C.y}{A} {C.g}✔{C.r}\n");C.os.remove(A)
+		if C.os.path.isfile(A):print(f"{C.r}_____________________________________________________________\n");print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} APK Already Exists.\n{C.g}  |\n  └──── {C.g}Removed Old APK... {C.y}{A} {C.g}✔{C.r}\n");C.os.remove(A)
 		if use_apktool:
 			D=[_A,_B,F.apktool_path,E,'-c',B,_C,A];print(f"{C.r}_____________________________________________________________\n");print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Recompile APK...");print(f"{C.g}  |\n  └──── {C.r}Recompiling with aapt ~{C.g}$ java -jar {C.os.path.basename(F.apktool_path)} b -c {C.os.path.basename(B)} -o {C.os.path.basename(A)}\n");print(f"{C.r}_____________________________________________________________{C.g}\n");print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} ApkTool Default...{C.g}\n")
 			try:C.subprocess.run(D,check=_D);print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Recompile Successful  {C.g}✔{C.r}\n");print(f"{C.r}_____________________________________________________________\n")
